@@ -40,8 +40,8 @@ function start() {
 	const canvas_context = canvas.getContext("2d");
 	const audio_context = new (window.AudioContext || window.webkitAudioContext)();
 
-	canvas.width = window.innerWidth;
-	canvas.height = window.innerHeight;
+	canvas.width = window.innerWidth - 100;
+	canvas.height = window.innerHeight - 100;
 
 	const width = canvas.width;
 	const height = canvas.height;
@@ -59,14 +59,30 @@ function start() {
 		const frame_string = "000" + frame_index++;
 		aqual_label.textContent = `aqua.flv - slide ${frame_string.substr(frame_string.length - 4)}`;
 
+		const blue = {
+			width: Math.random() * width,
+			height: Math.random() * height,
+		}
+
+		blue.x = Math.abs((Math.random() * width) - blue.width);
+		blue.y = Math.abs((Math.random() * height) - blue.height);
+
 		// primeiro o retangulo azul
 		canvas_context.fillStyle = "#00f";
-		canvas_context.fillRect(Math.random() * width, Math.random() * height, Math.random() * width, Math.random() * height);
+		canvas_context.fillRect(blue.x, blue.y, blue.width, blue.height);
+
+		const red = {
+			width: Math.random() * width,
+			height: Math.random() * height,
+		}
+
+		red.x = Math.abs((Math.random() * width) - red.width);
+		red.y = Math.abs((Math.random() * height) - red.height);
 
 		// em seguida o retangulo vermelho
 		// pois o retangulo vermelho sempre sobrepoe o azul
 		canvas_context.fillStyle = "#f00";
-		canvas_context.fillRect(Math.random() * width, Math.random() * height, Math.random() * width, Math.random() * height);
+		canvas_context.fillRect(red.x, red.y, red.width, red.height);
 
 		// instancia e reproduz uma nota
 		const note = new Sound(audio_context);
