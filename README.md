@@ -6,11 +6,11 @@ O Webdriver Torso é uma conta de testes de desempenho automatizada do YouTube q
 
 ### Onde encontrar o Webdriver Torso?
 Os videos do canal de testes do YouTube encontram-se no link abaixo:
-https://www.youtube.com/channel/UCsLiV4WJfkTEHH0b9PmRklw/videos
+ https://www.youtube.com/channel/UCsLiV4WJfkTEHH0b9PmRklw/videos
 
 ### Como testar o Simulador?
 Basta acessar o link que aparece a seguir:
-https://brunos3d.github.io/Webdriver-Torso-Simulator/
+ https://brunos3d.github.io/Webdriver-Torso-Simulator/
 
 
 ## Licença
